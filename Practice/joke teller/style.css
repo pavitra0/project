@@ -1,0 +1,65 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: #09bde5;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./robot.gif');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    width: 170px;
+    height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background: rgb(255, 71, 102);
+    /* border: 2px dashed white; */
+    border: none;
+    font-weight: 600;
+    border-radius: 2px;
+    box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.2);
+    /* font-size: 10px; */
+}
+button:hover{
+    filter: brightness(95%);
+}
+
+button:active{
+    transform: scale(.95);
+}
+
+button:disabled{
+    cursor: default;
+    filter:brightness(60%)
+}
+
+/* media query : tablet mobile  */
+@media screen and (max-width: 1000px){
+    .container{
+        background-position:center center;
+        /* background-size: 1000px; */
+        background-size: cover;
+    }
+
+    button{
+    box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.5);
+
+    }
+    
+}

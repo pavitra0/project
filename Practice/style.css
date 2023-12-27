@@ -1,0 +1,125 @@
+#btn1{
+    background-color: red;
+    height: 1.5rem;
+    width: 5rem;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+#btn2{
+    background-color: rgb(245, 244, 244);
+    height: 1.5rem;
+    width: 3rem;
+    border: 1.5px solid rgb(153, 153, 239);
+    color: rgb(116, 116, 245);
+    border-radius: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+*{
+    font-family: 'Gilroy';
+}
+
+#btn3{
+    color: white;
+    background-color: rgb(67, 131, 242);
+    border: none;
+    margin-left: 10px;
+    height: 1.5rem;
+    cursor: pointer;
+    width: 3.5rem;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    font-size: 10px;
+    transition: box-shadow 1s;
+}
+#btn3:hover{
+    box-shadow:1px 1px rgba(0,0,0,0.12) ;
+}
+/* #btn4{
+    color: white;
+    background-color: rgb(11, 11, 11);
+    border: none;
+    margin-left: 10px;
+    height: 1.7rem;
+    width: 5.5rem;
+    border-radius:2px;
+    font-size: 10px;
+    
+}
+#btn5{
+    color: rgb(27, 26, 26);
+    background-color: rgb(255, 216, 20);
+    border: none;
+    margin-left: 10px;
+    height: 1.7rem;
+    width: 8rem;
+    border-radius:50px;
+    font-size: 12px;
+    
+}
+#btn6{
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 164, 79);
+    border: none;
+    margin-left: 10px;
+    height: 1.7rem;
+    width: 4rem;
+    border-radius:5px;
+    font-size: 12px;
+    font-weight: 550;
+}
+#btn7{
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 82, 179);
+    border: none;
+    margin-left: 10px;
+    height: 1.7rem;
+    width: 5.5rem;
+    border-radius:3px;
+    font-size: 11px;
+    font-weight: 550;
+}
+#btn8{
+    color: rgb(121, 82, 179);
+    background-color: rgb(243, 242, 244);
+    border: 1px solid rgb(121, 82, 179);
+    margin-left: 3px;
+    height: 1.7rem;
+    width: 5.5rem;
+    border-radius:3px;
+    font-size: 11px;
+    font-weight: 550;
+}
+#btn9{
+    color: rgb(10, 102, 194);
+    background-color: #fff;
+    border: 1px solid rgb(10, 102, 194);
+    margin-left: 3px;
+    height: 1.7rem;
+    width: 3.5rem;
+    border-radius:50px;
+    font-size: 11px;
+    font-weight: 550;
+}
+#btn10{
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 102, 194);
+    border: none;
+    margin-left: 10px;
+    height: 1.7rem;
+    width: 11.5rem;
+    border-radius:50px;
+    font-size: 12px;
+    font-weight: 550;
+} */
+aside img{
+    height: 50px;
+    width: 50px;
+}

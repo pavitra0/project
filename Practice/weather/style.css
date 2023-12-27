@@ -1,0 +1,96 @@
+*{
+    font-family: 'Gilroy';
+
+}
+::selection{
+    color: rgb(255, 68, 0);
+}
+body{
+    color: aliceblue;
+    background: #233450;
+}
+    /* background: linear-gradient(45deg,#e66465, #9198e5);} */
+
+textarea{
+    border-radius: 50px;
+}
+button{
+    border-radius: 50px;
+    height: 30px;
+    width: 50px;
+    border: none;
+    background: #000;
+    color: rgb(246, 246, 0);
+}
+
+.login{
+/* opacity: 0;     */
+filter: blur(3px);
+transition: 3s;
+}
+.pass{
+justify-content: center;
+display: flex;
+align-items: center;
+
+}
+.pas{
+    color: black;
+    gap: 10px;
+    margin: 80px;
+    height: 50px;
+    border-radius: 10px;
+    width: 350px;
+    background-color: rgba(218, 249, 255, 0.953);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+input{
+    border: none;
+    border-radius: 50px;
+}
+input:focus{
+    outline: none;
+}
+
+
+/* div p:nth-child(1){
+    background-color: orangered;
+    color: rgb(167, 6, 6);
+    border-radius: 4px;
+    padding: 7px;
+}
+
+div p{
+    background-color: skyblue;
+    border-radius: 4px;
+    padding: 7px;
+} */
+
+
+.parent{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+img{
+    margin: 10px;
+    border-radius: 10px;
+    height: 150px;
+
+}
+.card{
+    height: 400px;
+    width: 300px;
+    background: #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+h6{
+    padding-right: 10px;
+    font-size: 10px;
+    border: solid 0.5 whitesmoke;
+}
