@@ -5,6 +5,11 @@ body{
     background-color: antiquewhite;
     /* background: linear-gradient(to top left, #6a0b90, #28d9d9) */
 }
+
+body::-webkit-scrollbar{
+    overflow: hidden;
+}
+
 h3{
     display: flex;
     justify-content: center;

@@ -5,19 +5,35 @@ const input = document.querySelector('input')
 const btn = document.querySelector('.btn')
 // console.log(input)
 
-function clicked(){
-    const html = `<li>${input.value}</li>`
-    ol.insertAdjacentHTML('afterend', html)
-    input.value = ''
+// function clicked(){
+//     const html = `<li>${input.value}</li>`
+//     ol.insertAdjacentHTML('afterend', html)
+//     input.value = ''
+// }
+// btn.addEventListener('click',()=>{
+//   clicked()
+// })
+// document.addEventListener('keydown',(e)=>{
+//     if(e.key === 'Enter'){
+//         clicked()
+//     }
+// })
+
+function addTask() {
+    const html = `<li>${input.value}</li>`;
+    ol.insertAdjacentHTML('beforeend', html);
+    input.value = '';
 }
-btn.addEventListener('click',()=>{
-  clicked()
-})
-document.addEventListener('keydown',(e)=>{
-    if(e.key === 'Enter'){
-        clicked()
+
+btn.addEventListener('click', () => {
+    addTask();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        addTask();
     }
-})
+});
 
 
 ///////////////////////////////////////////////////////
