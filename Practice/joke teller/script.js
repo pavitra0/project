@@ -49,7 +49,7 @@ async function getJokes(){
 
 //Event listeners 
 
-document.body.addEventListener('click', ()=>{ navigator.vibrate([1000])})
+document.body.addEventListener('click', ()=>{ navigator.vibrate([100])})
 button.addEventListener('click', ()=> navigator.vibrate(500))
 button.addEventListener('click',getJokes)
 audioElement.addEventListener('ended', toggleButton)
