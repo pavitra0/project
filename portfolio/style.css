@@ -1,0 +1,311 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.container{
+    background-color: #000;
+    height: 100vh;
+    margin: 0;
+}
+
+.display{
+    display:grid;
+    grid-template-columns: 10% 40% 50%;
+}
+
+.sidebar{
+    padding: 25px 25px;
+    display: grid;
+    height: 90;
+    grid-template-rows: 55px 1fr 1fr 1fr;
+}
+
+.bars{
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+
+.bars:hover{
+   transform: scale(1.2);
+}
+
+.name{
+    font-family: 'gilroy', sans-serif;
+    color: rgb(255, 255, 255);
+    writing-mode:vertical-lr;
+    width:15px;
+    height:150px;
+    -webkit-transform:rotate(180deg);
+    justify-content: center;
+    padding-top: 45px;
+}
+
+.name:hover{
+    text-decoration: underline ;
+    transition: ease 0.4s;
+
+}
+
+
+
+.tab{
+    transition: 0.3s;
+    display: grid;
+    grid-template-columns: 10px;
+    justify-self: start;
+    
+
+}
+
+.tab button:hover {
+    background: #ddd;
+  }
+
+.tab button.active {
+    background-color: #ffffff;
+  }
+
+.indi{
+    color: #ddd;
+    -webkit-transform:rotate(180deg);
+    writing-mode:vertical-lr;
+    margin-bottom: 10px;
+    font-size: 6px;
+    justify-self: start;
+    font-family:'IMB plex mono' ,monospace;
+
+
+
+}
+
+.tablinks{
+    width: 2px;
+    background: #616161;
+    border: none;
+    transition: all 0.3s;
+}
+
+/* for tab content */
+
+.tabcontent{
+    display: none;
+    color: rgb(196, 195, 195);
+    padding-top: 130px;
+    padding-left: 50px;
+    width: 250px;
+    font-family:'IBM plex mono', monospace;
+    font-weight: 200;
+    
+}
+
+.about{
+    display: grid;
+    color: white;
+    padding: 40px 25px;
+}
+
+
+.links-icon{
+    display: grid;
+    font-family:'gilroy', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin-top: 75px;
+    padding-left: 44px;
+}
+
+#mouse{
+    fill: white;
+    height: 20px;
+    width: 20px;
+    justify-self: end;
+}
+
+#mouse:hover{
+    fill: #ad0000;
+    transition: ease .3s;
+}
+
+.links-icon a:hover{
+    color: #ad0000;
+    transition: all 0.3s;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bg-img{
+    height: 515px;
+    width: 400px;
+    transition: all 1s;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.83);
+    overflow-x: hidden; 
+    transition: 0.5s; 
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 35%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay-content a:hover{
+    text-decoration: underline; 
+    transform: translate(-15px);
+  }
+  
+  .overlay a {
+    font-family:'IBM plex mono', monospace;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #818181;
+    display: block; 
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #cf1f1f;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
+    transform: rotate(45deg);
+
+  }
+
+  .closebtn:hover{
+    transform: rotate(0deg);
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+.projects-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1; 
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.83);
+    overflow-x: hidden; 
+    transition: 0.5s; 
+  }
+  
+  .projects-overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%;
+    text-align: end;
+    margin-top: 30px;
+    padding-right: 15%;
+  }
+
+  .projects-overlay-content a:hover{
+    text-decoration: underline; 
+    transform: translate(15px);
+  }
+  
+  .projects-overlay a {
+    font-family:'IBM plex mono', monospace;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #818181;
+    display: block; 
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .projects-overlay a:hover, .projects-overlay a:focus {
+    color: #cf1f1f;
+  }
+  
+  /* Position the close button (top right corner) */
+  .projects-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+    font-size: 50px;
+    transform: rotate(45deg);
+
+  }
+
+  .closebtn:hover{
+    transform: rotate(0deg);
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .projects-overlay a {font-size: 20px}
+    .projects-overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  @media screen and (max-width:600px){
+
+    .tabcontent{
+        width: 200px;
+        font-size: 13px;
+    }
+
+    .about{
+        padding: 0;
+    }
+
+    .links-icon{
+    padding-left: 44px;
+    }
+
+    .links-icon a:hover{
+        color: #ad0000;
+    transition: all 0.3s;
+
+    }
+    .display{
+        grid-template-columns: 10% 40% 50%;
+    }
+  }

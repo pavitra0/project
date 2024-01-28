@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prg-dev</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <div class="sidebar">
+          <img onclick="openNav()" class="bars" src="bars-solid.svg" alt="" />
+          <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+            <div class="overlay-content">
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Clients</a>
+              <a href="#">Contact</a>
+            </div>
+          
+          </div>
+          
+
+          <h4 class="name">Pavitra rathod</h4>
+          <div class="tab">
+            <h6 class="indi">01/03</h6>
+            <button
+              class="tablinks active"
+              onclick="openCity(event, 'London')"
+            ></button>
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'Paris')"
+            ></button>
+            <button
+              class="tablinks"
+              onclick="openCity(event, 'Tokyo')"
+            ></button>
+          </div>
+        </div>
+        <div class="about">
+
+          <div id="London" class="tabcontent" style="display: block;">
+            <h1>01</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Recusandae accusamus ad maiores..
+            </p>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <h1></h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugiat
+              similique odio accusamus aliquid doloremque..
+            </p>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <h1></h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+              deserunt iste soluta officiis aliquid fuga modi sapiente
+              accusantium!.
+            </p>
+          </div>
+
+          <div class="links-icon">
+              <div class="link-1">
+                <h6>01</h6>  
+                <a href="#"  >home</a>
+
+                <div id="projects" class="projects-overlay">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeProjects()">&times;</a>
+                
+                  <div class="projects-overlay-content">
+                    <a href="https://wayther.playcode.io" target="_blank">Wayther app</a>
+                    <a href="https://sneke.playcode.io" target="_blank" >Sneke.io</a>
+                    <a href="#">Joke Teller</a>
+                    <a href="#">Calculator</a>
+                  </div>
+
+                
+                </div>
+              </div>
+              <div class="link-2">
+                <h6>02</h6>  
+                <a onclick="projectSlider()"  >projects</a>
+              </div>
+              <div class="link-3">
+                <h6>03</h6>  
+                <a href="#" >contact</a>
+              </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="mouse"><g data-name="Layer 2"><path d="M16,2a9.01,9.01,0,0,0-9,9V21a9,9,0,0,0,18,0V11A9.01,9.01,0,0,0,16,2Zm7,19A7,7,0,0,1,9,21V11a7,7,0,0,1,14,0Z"></path><path d="M16,8a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V9A1,1,0,0,0,16,8Z"></path></g></svg>
+        </div>
+        <div class="img">
+          <img class="bg-img" src="bg-image1.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
