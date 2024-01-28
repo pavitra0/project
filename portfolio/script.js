@@ -23,11 +23,11 @@ function openCity(evt, cityName) {
     currentTab.style.display = "block";
     
     if (cityName === 'London') {
-      document.querySelector('.bg-img').src = 'bg-image1.jpg'; // Change to the appropriate image path
+      document.querySelector('.bg-img').src = './bg-image1.jpg'; // Change to the appropriate image path
     } else if (cityName === 'Paris') {
-      document.querySelector('.bg-img').src = 'bg-image2.jpg'; // Change to the appropriate image path
+      document.querySelector('.bg-img').src = './bg-image2.jpg'; // Change to the appropriate image path
     } else if (cityName === 'Tokyo') {
-      document.querySelector('.bg-img').src = 'bg-image3.jpg'; // Change to the appropriate image path
+      document.querySelector('.bg-img').src = './bg-image3.jpg'; // Change to the appropriate image path
     }
 
     var buttonPosition = Array.from(tablinks).indexOf(evt.currentTarget) + 1;
