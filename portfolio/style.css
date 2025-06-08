@@ -1,266 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  font-family: 'IBM Plex Mono', monospace;
-  background-color: #000;
-  color: #fff;
+    height: 100%;
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-/* Layout */
 .container {
-  height: 100vh;
+    background-color: #000;
+    height: 100vh;
 }
 
 .display {
-  display: grid;
-  grid-template-columns: 10% 40% 50%;
+    display: grid;
+    grid-template-columns: 10% 40% 50%;
+    height: 100%;
 }
 
-/* Sidebar */
 .sidebar {
-  padding: 25px;
-  display: grid;
-  height: 90px;
-  grid-template-rows: 55px 1fr 1fr 1fr;
+    padding: 25px;
+    display: grid;
+    height: 90px;
+    grid-template-rows: 55px 1fr 1fr 1fr;
 }
 
-/* Icon */
 .bars {
-  height: 12px;
-  width: 12px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .bars:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
-/* Vertical Name */
 .name {
-  font-family: 'IBM Plex Mono', monospace;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  width: 15px;
-  height: 150px;
-  text-align: center;
-  padding-top: 45px;
-  color: #fff;
+    font-family: 'Gilroy', sans-serif;
+    color: white;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    width: 15px;
+    height: 150px;
+    justify-content: center;
+    padding-top: 45px;
 }
 
 .name:hover {
-  text-decoration: underline;
-  transition: text-decoration 0.4s ease;
+    text-decoration: underline;
+    transition: ease 0.4s;
 }
 
-/* Tabs */
 .tab {
-  display: grid;
-  grid-template-columns: 10px;
-  justify-self: start;
-  transition: 0.3s;
-}
-
-.tab button {
-  width: 2px;
-  background: #616161;
-  border: none;
-  transition: all 0.3s;
+    transition: 0.3s;
+    display: grid;
+    grid-template-columns: 10px;
+    justify-self: start;
 }
 
 .tab button:hover {
-  background: #ddd;
+    background: #ddd;
 }
 
 .tab button.active {
-  background-color: #ffffff;
+    background-color: #fff;
 }
 
 .indi {
-  color: #ddd;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  margin-bottom: 10px;
-  font-size: 6px;
-  justify-self: start;
-  font-family: 'IBM Plex Mono', monospace;
+    color: #ddd;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+    font-size: 6px;
+    justify-self: start;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-/* Tab Content */
+.tablinks {
+    width: 2px;
+    height: 30px;
+    background: #616161;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+/* Tab content */
 .tabcontent {
-  display: none;
-  padding-top: 130px;
-  padding-left: 50px;
-  width: 250px;
-  font-weight: 200;
-  color: #c4c3c3;
+    display: none;
+    color: #c4c3c3;
+    padding-top: 130px;
+    padding-left: 50px;
+    width: 250px;
+    font-weight: 200;
 }
 
-/* About Section */
 .about {
-  display: grid;
-  color: white;
-  padding: 40px 25px;
+    display: grid;
+    color: white;
+    padding: 40px 25px;
 }
 
-/* Links */
 .links-icon {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: 10px;
-  font-weight: 700;
-  margin-top: 75px;
-  padding-left: 44px;
+    display: grid;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 75px;
+    padding-left: 44px;
 }
 
-.links-icon a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.links-icon a:hover {
-  color: #ad0000;
-}
-
-/* Mouse Icon */
 #mouse {
-  fill: white;
-  height: 20px;
-  width: 20px;
-  justify-self: end;
-  transition: fill 0.3s ease;
+    fill: white;
+    height: 20px;
+    width: 20px;
+    justify-self: end;
+    transition: fill 0.3s ease;
 }
 
 #mouse:hover {
-  fill: #ad0000;
+    fill: #ad0000;
 }
 
-/* Background Image */
+.links-icon a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.links-icon a:hover {
+    color: #ad0000;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .bg-img {
-  height: 515px;
-  width: 400px;
-  transition: all 1s;
+    height: 515px;
+    width: 400px;
+    transition: all 1s;
 }
 
-/* Overlay Common */
-.overlay,
+.overlay, .projects-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.83);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay {
+    left: 0;
+    top: 0;
+}
+
 .projects-overlay {
-  position: fixed;
-  height: 100%;
-  width: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.83);
-  overflow-x: hidden;
-  transition: 0.5s;
+    right: 0;
+    bottom: 0;
 }
 
-/* Overlay Content */
-.overlay-content,
-.projects-overlay-content {
-  position: relative;
-  top: 25%;
-  margin-top: 30px;
+.overlay-content, .projects-overlay-content {
+    position: relative;
+    top: 25%;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .overlay-content {
-  width: 35%;
-  text-align: center;
+    width: 35%;
 }
 
 .projects-overlay-content {
-  width: 100%;
-  text-align: end;
-  padding-right: 15%;
+    width: 100%;
+    text-align: end;
+    padding-right: 15%;
 }
 
-.overlay a,
-.projects-overlay a {
-  font-size: 10px;
-  font-weight: 400;
-  color: #818181;
-  display: block;
-  padding: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+.overlay a, .projects-overlay a {
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.overlay a:hover,
-.overlay a:focus,
-.projects-overlay a:hover,
-.projects-overlay a:focus {
-  color: #cf1f1f;
-  text-decoration: underline;
-  transform: translateX(15px);
+.overlay a:hover, .overlay a:focus,
+.projects-overlay a:hover, .projects-overlay a:focus {
+    color: #cf1f1f;
+    text-decoration: underline;
 }
 
-/* Close Button */
-.overlay .closebtn,
-.projects-overlay .closebtn {
-  position: absolute;
-  font-size: 50px;
-  transform: rotate(45deg);
-  transition: transform 0.3s ease;
-}
-
-.overlay .closebtn {
-  top: 20px;
-  right: 45px;
-}
-
-.projects-overlay .closebtn {
-  top: 20px;
-  left: 45px;
-}
-
-.closebtn:hover {
-  transform: rotate(0deg);
-}
-
-/* Media Queries */
-@media screen and (max-height: 450px) {
-  .overlay a,
-  .projects-overlay a {
-    font-size: 20px;
-  }
-
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-
-  .projects-overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    left: 35px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .tabcontent {
-    width: 200px;
-    font-size: 13px;
-  }
-
-  .about {
-    padding: 0;
-  }
-
-  .links-icon {
-    padding-left: 44px;
-  }
-
-  .display {
-    grid-template-columns: 10% 40% 50%;
-  }
-}
+.overlay .closebtn, .projects-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    font-size: 50px;
+    transform: rotate(45
