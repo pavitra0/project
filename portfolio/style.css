@@ -1,315 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body{
-    height:100%;
-    width:100%;
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #000;
+  color: #fff;
 }
 
-.container{
-    background-color: #000;
-    height: 100vh;
-    margin: 0;
+/* Layout */
+.container {
+  height: 100vh;
 }
 
-.display{
-    display:grid;
-    grid-template-columns: 10% 40% 50%;
+.display {
+  display: grid;
+  grid-template-columns: 10% 40% 50%;
 }
 
-.sidebar{
-    padding: 25px 25px;
-    display: grid;
-    height: 90;
-    grid-template-rows: 55px 1fr 1fr 1fr;
+/* Sidebar */
+.sidebar {
+  padding: 25px;
+  display: grid;
+  height: 90px;
+  grid-template-rows: 55px 1fr 1fr 1fr;
 }
 
-.bars{
-    height: 12px;
-    width: 12px;
-    cursor: pointer;
+/* Icon */
+.bars {
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.bars:hover{
-   transform: scale(1.2);
+.bars:hover {
+  transform: scale(1.2);
 }
 
-.name{
-    font-family: 'gilroy', sans-serif;
-    color: rgb(255, 255, 255);
-    writing-mode:vertical-lr;
-    width:15px;
-    height:150px;
-    -webkit-transform:rotate(180deg);
-    justify-content: center;
-    padding-top: 45px;
+/* Vertical Name */
+.name {
+  font-family: 'IBM Plex Mono', monospace;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  width: 15px;
+  height: 150px;
+  text-align: center;
+  padding-top: 45px;
+  color: #fff;
 }
 
-.name:hover{
-    text-decoration: underline ;
-    transition: ease 0.4s;
-
+.name:hover {
+  text-decoration: underline;
+  transition: text-decoration 0.4s ease;
 }
 
+/* Tabs */
+.tab {
+  display: grid;
+  grid-template-columns: 10px;
+  justify-self: start;
+  transition: 0.3s;
+}
 
-
-.tab{
-    transition: 0.3s;
-    display: grid;
-    grid-template-columns: 10px;
-    justify-self: start;
-    
-
+.tab button {
+  width: 2px;
+  background: #616161;
+  border: none;
+  transition: all 0.3s;
 }
 
 .tab button:hover {
-    background: #ddd;
-  }
+  background: #ddd;
+}
 
 .tab button.active {
-    background-color: #ffffff;
-  }
-
-.indi{
-    color: #ddd;
-    -webkit-transform:rotate(180deg);
-    writing-mode:vertical-lr;
-    margin-bottom: 10px;
-    font-size: 6px;
-    justify-self: start;
-    font-family:'IMB plex mono' ,monospace;
-
-
-
+  background-color: #ffffff;
 }
 
-.tablinks{
-    width: 2px;
-    background: #616161;
-    border: none;
-    transition: all 0.3s;
+.indi {
+  color: #ddd;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+  font-size: 6px;
+  justify-self: start;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-/* for tab content */
-
-.tabcontent{
-    display: none;
-    color: rgb(196, 195, 195);
-    padding-top: 130px;
-    padding-left: 50px;
-    width: 250px;
-    font-family:'IBM plex mono', monospace;
-    font-weight: 200;
-    
+/* Tab Content */
+.tabcontent {
+  display: none;
+  padding-top: 130px;
+  padding-left: 50px;
+  width: 250px;
+  font-weight: 200;
+  color: #c4c3c3;
 }
 
-.about{
-    display: grid;
-    color: white;
-    padding: 40px 25px;
+/* About Section */
+.about {
+  display: grid;
+  color: white;
+  padding: 40px 25px;
 }
 
-
-.links-icon{
-    display: grid;
-    font-family:'gilroy', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    grid-template-columns: 1fr 1fr 1fr ;
-    margin-top: 75px;
-    padding-left: 44px;
+/* Links */
+.links-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 75px;
+  padding-left: 44px;
 }
 
-#mouse{
-    fill: white;
-    height: 20px;
-    width: 20px;
-    justify-self: end;
+.links-icon a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-#mouse:hover{
-    fill: #ad0000;
-    transition: ease .3s;
+.links-icon a:hover {
+  color: #ad0000;
 }
 
-.links-icon a:hover{
-    color: #ad0000;
-    transition: all 0.3s;
+/* Mouse Icon */
+#mouse {
+  fill: white;
+  height: 20px;
+  width: 20px;
+  justify-self: end;
+  transition: fill 0.3s ease;
 }
 
-a{
-    text-decoration: none;
-    color: #ffffff;
+#mouse:hover {
+  fill: #ad0000;
 }
 
-.bg-img{
-    height: 515px;
-    width: 400px;
-    transition: all 1s;
+/* Background Image */
+.bg-img {
+  height: 515px;
+  width: 400px;
+  transition: all 1s;
 }
 
-
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.83);
-    overflow-x: hidden; 
-    transition: 0.5s; 
-  }
-  
-  .overlay-content {
-    position: relative;
-    top: 25%; 
-    width: 35%;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .overlay-content a:hover{
-    text-decoration: underline; 
-    transform: translate(-15px);
-  }
-  
-  .overlay a {
-    font-family:'IBM plex mono', monospace;
-    padding: 8px;
-    font-size: 10px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #818181;
-    display: block; 
-    transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #cf1f1f;
-  }
-  
-  /* Position the close button (top right corner) */
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 50px;
-    transform: rotate(45deg);
-
-  }
-
-  .closebtn:hover{
-    transform: rotate(0deg);
-  }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
-
-
+/* Overlay Common */
+.overlay,
 .projects-overlay {
-    height: 100%;
-    width: 0;
-    position: fixed; 
-    z-index: 1; 
-    right: 0;
-    bottom: 0;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.83);
-    overflow-x: hidden; 
-    transition: 0.5s; 
-  }
-  
-  .projects-overlay-content {
-    position: relative;
-    top: 25%; 
-    width: 100%;
-    text-align: end;
-    margin-top: 30px;
-    padding-right: 15%;
-  }
+  position: fixed;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.83);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
 
-  .projects-overlay-content a:hover{
-    text-decoration: underline; 
-    transform: translate(15px);
-  }
-  
+/* Overlay Content */
+.overlay-content,
+.projects-overlay-content {
+  position: relative;
+  top: 25%;
+  margin-top: 30px;
+}
+
+.overlay-content {
+  width: 35%;
+  text-align: center;
+}
+
+.projects-overlay-content {
+  width: 100%;
+  text-align: end;
+  padding-right: 15%;
+}
+
+.overlay a,
+.projects-overlay a {
+  font-size: 10px;
+  font-weight: 400;
+  color: #818181;
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus,
+.projects-overlay a:hover,
+.projects-overlay a:focus {
+  color: #cf1f1f;
+  text-decoration: underline;
+  transform: translateX(15px);
+}
+
+/* Close Button */
+.overlay .closebtn,
+.projects-overlay .closebtn {
+  position: absolute;
+  font-size: 50px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.overlay .closebtn {
+  top: 20px;
+  right: 45px;
+}
+
+.projects-overlay .closebtn {
+  top: 20px;
+  left: 45px;
+}
+
+.closebtn:hover {
+  transform: rotate(0deg);
+}
+
+/* Media Queries */
+@media screen and (max-height: 450px) {
+  .overlay a,
   .projects-overlay a {
-    font-family:'IBM plex mono', monospace;
-    padding: 8px;
-    font-size: 10px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #818181;
-    display: block; 
-    transition: 0.3s;
+    font-size: 20px;
   }
-  
-  /* When you mouse over the navigation links, change their color */
-  .projects-overlay a:hover, .projects-overlay a:focus {
-    color: #cf1f1f;
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
-  
-  /* Position the close button (top right corner) */
+
   .projects-overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    left: 45px;
-    font-size: 50px;
-    transform: rotate(45deg);
+    font-size: 40px;
+    top: 15px;
+    left: 35px;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .tabcontent {
+    width: 200px;
+    font-size: 13px;
   }
 
-  .closebtn:hover{
-    transform: rotate(0deg);
-  }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .projects-overlay a {font-size: 20px}
-    .projects-overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
+  .about {
+    padding: 0;
   }
 
-  @media screen and (max-width:600px){
-
-    .tabcontent{
-        width: 200px;
-        font-size: 13px;
-    }
-
-    .about{
-        padding: 0;
-    }
-
-    .links-icon{
+  .links-icon {
     padding-left: 44px;
-    }
-
-    .links-icon a:hover{
-        color: #ad0000;
-    transition: all 0.3s;
-
-    }
-    .display{
-        grid-template-columns: 10% 40% 50%;
-    }
   }
+
+  .display {
+    grid-template-columns: 10% 40% 50%;
+  }
+}
